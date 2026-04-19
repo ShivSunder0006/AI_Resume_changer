@@ -1,0 +1,44 @@
+name: ai-resume-agent
+channels:
+  - conda-forge
+  - defaults
+dependencies:
+  - python=3.11
+  - pip
+  - pip:
+      # --- PDF Processing ---
+      - PyMuPDF>=1.25.0
+      - pdfplumber>=0.11.0
+      - reportlab>=4.1
+      - pdf2docx>=0.5.8
+      - python-docx>=1.1.0
+
+      # --- LLM & Agent Framework ---
+      - langgraph>=0.4.0
+      - langchain-core>=0.3.0
+      - langchain-groq>=0.3.0
+      - langchain-google-genai>=2.1.0
+
+      # --- API ---
+      - fastapi>=0.115.0
+      - uvicorn[standard]>=0.34.0
+      - python-multipart>=0.0.18
+
+      # --- UI ---
+      - streamlit>=1.42.0
+
+      # --- Config & Utilities ---
+      - pydantic>=2.10.0
+      - pydantic-settings>=2.7.0
+      - python-dotenv>=1.0.0
+
+      # --- Evaluation ---
+      - scikit-learn>=1.6.0
+
+      # --- Testing ---
+      - pytest>=8.3.0
+      - pytest-asyncio>=0.24.0
+      - httpx>=0.28.0
+
+      # --- Logging ---
+      - loguru>=0.7.0
